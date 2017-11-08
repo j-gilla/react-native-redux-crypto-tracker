@@ -19,7 +19,7 @@
     "test": "node node_modules/jest/bin/jest.js --watch",
     "postinstall": "remotedev-debugger — hostname localhost — port 5678 — injectserver"
   },
-  "remotedev":{
+  "remotedev": {
     "hostname": "localhost",
     "port": 5678
   },
@@ -27,6 +27,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "axios": "^0.17.0",
     "eslint": "^4.10.0",
     "expo": "^22.0.2",
     "react": "16.0.0-beta.5",
