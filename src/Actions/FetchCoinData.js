@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { apiBaseURL } from './../Utils/Constants';
+import  { apiBaseURL }  from './../Utils/Constants'
 import {
     FETCHING_COIN_DATA,
     FETCHING_COIN_DATA_SUCCESS,
@@ -11,12 +11,12 @@ export default function FetchCoinData(apiBaseURL){
 
         dispatch({ type: FETCHING_COIN_DATA })
         
-        return axios.get(`${apiBaseURL}/v1/ticket/?limit=10`)
+        return axios.get(`${apiBaseURL}/v1/ticker/?limit=10`)
             .then(res => {
-                dispatch({ type: FETCHING_COIN_DATA_SUCCESS, payload: res.data })
+                dispatch({ type: FETCHING_COIN_DATA_SUCCESS, payload: console.log(res)})
             })
             .catch(err => {
-                dispatch({ type: FETCHING_COIN_DATA_FAIL, payload: err.data })
+                dispatch({ type: FETCHING_COIN_DATA_FAIL, payload: console.log(err)})
             });
     }
 }
