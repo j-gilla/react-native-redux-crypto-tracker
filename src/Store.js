@@ -11,7 +11,7 @@ import logger from 'redux-logger';
 
 import RootReduer from './Reducers';
 
-const middleware= applyMiddleware(thunk, promise, logger);
+const middleware = applyMiddleware(thunk, promise, logger);
 
 const Store = createStore(
     RootReduer,

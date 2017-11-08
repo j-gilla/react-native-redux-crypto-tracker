@@ -1,14 +1,19 @@
-import React from 'react';
-import { Text, View } from 'react-native';
-import Header from './src/components/Header';
+import React, {Component} from 'react';
+import { View } from 'react-native';
+import { Provider } from 'react-redux';
 
-export default class App extends React.Component {
+import Store from './src/Store';
+import { Header } from './src/components/Header';
+
+export default class App extends Component {
   render() {
     return (
+    <Provider store={Store}>
       <View >
         <Header />
       </View>
-    );
+    </Provider>  
+  );
   }
 }
 
